@@ -1,0 +1,130 @@
+[
+  {
+    "evaluation": "Curated/2B",
+    "quartile": 1,
+    "n": 207,
+    "errors": 143,
+    "rescues": 30,
+    "rescue_rate_among_errors": 0.2097902097902098
+  },
+  {
+    "evaluation": "Curated/2B",
+    "quartile": 2,
+    "n": 206,
+    "errors": 127,
+    "rescues": 16,
+    "rescue_rate_among_errors": 0.12598425196850394
+  },
+  {
+    "evaluation": "Curated/2B",
+    "quartile": 3,
+    "n": 206,
+    "errors": 122,
+    "rescues": 4,
+    "rescue_rate_among_errors": 0.03278688524590164
+  },
+  {
+    "evaluation": "Curated/2B",
+    "quartile": 4,
+    "n": 206,
+    "errors": 71,
+    "rescues": 0,
+    "rescue_rate_among_errors": 0.0
+  },
+  {
+    "evaluation": "Curated/4B",
+    "quartile": 1,
+    "n": 207,
+    "errors": 143,
+    "rescues": 29,
+    "rescue_rate_among_errors": 0.20279720279720279
+  },
+  {
+    "evaluation": "Curated/4B",
+    "quartile": 2,
+    "n": 206,
+    "errors": 128,
+    "rescues": 5,
+    "rescue_rate_among_errors": 0.0390625
+  },
+  {
+    "evaluation": "Curated/4B",
+    "quartile": 3,
+    "n": 206,
+    "errors": 104,
+    "rescues": 4,
+    "rescue_rate_among_errors": 0.038461538461538464
+  },
+  {
+    "evaluation": "Curated/4B",
+    "quartile": 4,
+    "n": 206,
+    "errors": 55,
+    "rescues": 1,
+    "rescue_rate_among_errors": 0.01818181818181818
+  },
+  {
+    "evaluation": "Primary/2B",
+    "quartile": 1,
+    "n": 512,
+    "errors": 361,
+    "rescues": 69,
+    "rescue_rate_among_errors": 0.19113573407202217
+  },
+  {
+    "evaluation": "Primary/2B",
+    "quartile": 2,
+    "n": 512,
+    "errors": 338,
+    "rescues": 24,
+    "rescue_rate_among_errors": 0.07100591715976332
+  },
+  {
+    "evaluation": "Primary/2B",
+    "quartile": 3,
+    "n": 512,
+    "errors": 311,
+    "rescues": 8,
+    "rescue_rate_among_errors": 0.02572347266881029
+  },
+  {
+    "evaluation": "Primary/2B",
+    "quartile": 4,
+    "n": 512,
+    "errors": 152,
+    "rescues": 0,
+    "rescue_rate_among_errors": 0.0
+  },
+  {
+    "evaluation": "Primary/4B",
+    "quartile": 1,
+    "n": 512,
+    "errors": 323,
+    "rescues": 71,
+    "rescue_rate_among_errors": 0.21981424148606812
+  },
+  {
+    "evaluation": "Primary/4B",
+    "quartile": 2,
+    "n": 512,
+    "errors": 324,
+    "rescues": 25,
+    "rescue_rate_among_errors": 0.07716049382716049
+  },
+  {
+    "evaluation": "Primary/4B",
+    "quartile": 3,
+    "n": 512,
+    "errors": 248,
+    "rescues": 10,
+    "rescue_rate_among_errors": 0.04032258064516129
+  },
+  {
+    "evaluation": "Primary/4B",
+    "quartile": 4,
+    "n": 512,
+    "errors": 111,
+    "rescues": 3,
+    "rescue_rate_among_errors": 0.02702702702702703
+  }
+]

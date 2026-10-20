@@ -1,0 +1,140 @@
+{
+  "status": "PASS",
+  "checked_utc": "2026-10-20T06:43:49.551853+00:00",
+  "full_cpu_reanalysis": {
+    "started_utc": "2026-10-20T06:35:14.184941+00:00",
+    "archive_hashes": {
+      "archives/S10_revision_analyses.zip": "553ac7b51766c354e992e7a30bad2fc0c4ff61844c399f0d4e562843b5d6bd14",
+      "archives/S2_analysis_records.zip": "5f91ba0644faaa243799d36e27283f87663319117e793c3c9d6ee6e629cf4652",
+      "archives/S3_raw_predictions.zip": "1ee774bfacb846a6d5a0b07cc3ae9204611e19902b69c2f2cd9d8e7e164d8423",
+      "archives/S4_historical_discovery.zip": "6154deda43a3547f9a85d74628546541eae38773415dad0e598ee3ee3d95420e",
+      "archives/S5_additional_controls.zip": "96b858ab387803069c35d0d173329d024a978c2740ea8dfaf58bce1983ca1909",
+      "archives/S6_complete_grid_2b_and_analyses.zip": "4eb31bcf14871bf81d46526a9f0363410eba33d44350ecdf92c5065f496e611d",
+      "archives/S7_complete_grid_4b_predictions.zip": "55f787bd844fe3a6d29a9b1b43cba6d90b58d49ca3479025cfd16f1838a0003e",
+      "archives/S8_exact_controls_and_capture.zip": "a5ac6882fe2b7b13f126e161ef9ecf400c1a8a76445910194492b0fdeb0e3897",
+      "archives/S9_partial_capture_and_content_checks.zip": "3991b34d1a816114fefed7e7363449d3de24ab042bb6d6048cca04d48655652c"
+    },
+    "commands": [
+      {
+        "command": [
+          "reproducibility_bundle/portable_reanalysis.py",
+          "reproducibility_bundle"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\01_portable_reanalysis.log"
+      },
+      {
+        "command": [
+          "rerun_additional_analysis.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\02_rerun_additional_analysis.log"
+      },
+      {
+        "command": [
+          "verify_additional_analysis.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\03_verify_additional_analysis.log"
+      },
+      {
+        "command": [
+          "reproduce_added_analyses.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\04_reproduce_added_analyses.log"
+      },
+      {
+        "command": [
+          "window_audit_20261019/analyze_windows.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\05_analyze_windows.log"
+      },
+      {
+        "command": [
+          "window_audit_20261019/review_checks.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\06_review_checks.log"
+      },
+      {
+        "command": [
+          "window_audit_20261019/verify_windows.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\07_verify_windows.log"
+      },
+      {
+        "command": [
+          "review_extension_20261019/analyze_extension.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\08_analyze_extension.log"
+      },
+      {
+        "command": [
+          "review_extension_20261019/verify_extension.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\09_verify_extension.log"
+      },
+      {
+        "command": [
+          "content_checks_20261019/analyze_content.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\10_analyze_content.log"
+      },
+      {
+        "command": [
+          "content_checks_20261019/verify_content.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\11_verify_content.log"
+      },
+      {
+        "command": [
+          "revision_2026_analyses/portable_reproduce.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\12_portable_reproduce.log"
+      },
+      {
+        "command": [
+          "current_figures/build_figures.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\13_build_figures.log"
+      },
+      {
+        "command": [
+          "final_resources/create_figure1.py"
+        ],
+        "exit_code": 0,
+        "log": "reproduction_logs\\14_create_figure1.log"
+      }
+    ],
+    "status": "PASS",
+    "finished_utc": "2026-10-20T06:39:29.851333+00:00"
+  },
+  "error_conditioned_recalculation": {
+    "status": "PASS",
+    "strata": 16,
+    "questions": 5746
+  },
+  "final_figure1_independently_rebuilt_png_identical": true,
+  "final_source_hashes": {
+    "manuscript\\main.tex": "df7507cc64092f0d38900eaf7ec3ac5e2257e369578134b48f932fc1ca27ad34",
+    "manuscript\\supporting.tex": "5b2f9c9d8e41ec031a2c357b8a4d5a31a464a413cbc4588cd3edaea5df3bab7a",
+    "create_figure1.py": "364a4e61aeb226471cf2aba5556bf30d035f78f41842488b3f9a579c4b28dd63",
+    "public_repository\\verify_and_extract.py": "55fd224e5ba28e28b5b0780e05ebeb665ecf596c6da2df9ecd23fafd747750f8",
+    "public_repository\\final_resources\\compute_error_conditioned.py": "1432eb0b1db4ab127337eaa01d0f62fe3b8c349d5493e9407c6dfde517cd343b"
+  },
+  "notes": [
+    "14 numerical/figure stages completed from fresh extraction.",
+    "Final figure wording was updated after the initial run and independently rebuilt.",
+    "Error-conditioned check added to the final wrapper and separately executed after initial run.",
+    "No VLM inference or new experimental data collection in this revision."
+  ]
+}

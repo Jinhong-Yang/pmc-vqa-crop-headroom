@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite this dataset when using the numerical records or code."
+type: dataset
+title: "Oracle headroom and SigLIP crop-ranking benefit in Qwen3-VL on PMC-VQA: data and code"
+version: 1.0.0
+date-released: 2026-10-20
+authors:
+  - family-names: Yoo
+    given-names: Nam-Hyun
+    orcid: "https://orcid.org/0000-0003-2161-9251"
+  - family-names: Park
+    given-names: Hyojin
+    orcid: "https://orcid.org/0009-0002-2387-8994"
+  - family-names: Yang
+    given-names: Jinhong
+    orcid: "https://orcid.org/0000-0002-7756-0263"
+license: CC-BY-4.0
+repository-code: "https://github.com/Jinhong-Yang/pmc-vqa-crop-headroom"

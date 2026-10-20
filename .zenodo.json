@@ -20,6 +20,7 @@
     }
   ],
   "version": "1.0.0",
+  "doi": "10.5281/zenodo.23492663",
   "license": "cc-by-4.0",
   "description": "Study-generated numerical predictions, reference mappings, protocols, reproducible CPU analyses and final Figure 1 for the PMC-VQA crop-ranking study. Original numerical archives S2-S10 are byte-preserved. The primary cohort has 2,048 groups and the curated cohort 825 groups, shared by two model sizes. No source image collection or model weights is included. Study-authored code is MIT; study data/documentation/figures are CC BY 4.0, with original rights retained for third-party source cards and notices. See LICENSE.txt and REPRODUCING.md.",
   "related_identifiers": [

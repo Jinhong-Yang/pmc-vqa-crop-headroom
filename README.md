@@ -3,6 +3,13 @@
 Numerical data and reproducible analyses for *Oracle headroom and SigLIP
 crop-ranking benefit diverge in Qwen3-VL on PMC-VQA*.
 
+**Archived release v1.0.0:** [10.5281/zenodo.23492663](https://doi.org/10.5281/zenodo.23492663).
+The Zenodo archive and GitHub release asset contain the identical verified
+`public_data_and_code_v1.0.0.zip` (56,377,051 bytes; SHA256
+`b331e5a97d144b88679ac0c3db2a74e3f4f73834e813e3df458cf409e69d93c0`).
+The archive was frozen before DOI issuance; this repository's citation metadata
+adds the issued DOI without changing the numerical archives.
+
 **Authors:** Nam-Hyun Yoo (Kyungnam University), Hyojin Park (GIIC, Kyungnam
 University), Jinhong Yang (Inje University; corresponding author,
 jinhong@inje.ac.kr).

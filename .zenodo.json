@@ -1,7 +1,7 @@
 {
   "title": "Oracle headroom and SigLIP crop-ranking benefit in Qwen3-VL on PMC-VQA: data and code",
   "upload_type": "dataset",
-  "publication_date": "2026-10-20",
+  "publication_date": "2026-10-24",
   "creators": [
     {
       "name": "Yoo, Nam-Hyun",
@@ -19,10 +19,10 @@
       "orcid": "0000-0002-7756-0263"
     }
   ],
-  "version": "1.0.0",
-  "doi": "10.5281/zenodo.23492663",
+  "version": "1.1.0",
+  "doi": "10.5281/zenodo.23614485",
   "license": "cc-by-4.0",
-  "description": "Study-generated numerical predictions, reference mappings, protocols, reproducible CPU analyses and final Figure 1 for the PMC-VQA crop-ranking study. Original numerical archives S2-S10 are byte-preserved. The primary cohort has 2,048 groups and the curated cohort 825 groups, shared by two model sizes. No source image collection or model weights is included. Study-authored code is MIT; study data/documentation/figures are CC BY 4.0, with original rights retained for third-party source cards and notices. See LICENSE.txt and REPRODUCING.md.",
+  "description": "Complete study-generated numerical records and reproducible code for the PMC-VQA crop-ranking study. This version preserves S2-S12 and adds S13: four-cyclic-order probability averaging for primary Qwen3-VL 2B, all 128 excluded technical pilot and 2048 main questions, and answer-position/runner-up diagnostics. It includes the prior derangement, smaller-window and calibration extensions. Original single-order primary contrast: -0.15 pp (95% CI -0.81 to 0.52). Four-order matched contrast: +0.98 pp (nominal 95% CI +0.26 to +1.71). Averaged baseline and guided direct accuracy were both 45.80%; the original near-zero contrast is conditional on order handling. All extensions are exploratory; no external preregistration, clinician label audit or larger-model experiment is claimed. Source images, question/option text and model weights are not redistributed. Study-generated data, documentation and figures are CC BY 4.0; study-authored code is MIT. Original third-party rights are retained. OpenAI Codex assisted code development, execution, numerical verification, documentation and plotting.",
   "related_identifiers": [
     {
       "identifier": "https://github.com/Jinhong-Yang/pmc-vqa-crop-headroom",

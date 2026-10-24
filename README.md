@@ -1,79 +1,40 @@
 # Oracle headroom and SigLIP crop-ranking benefit on PMC-VQA
 
-Numerical data and reproducible analyses for *Oracle headroom and SigLIP
-crop-ranking benefit diverge in Qwen3-VL on PMC-VQA*.
+Complete numerical data and reproducible analyses for *Oracle headroom and SigLIP crop-ranking benefit diverge in Qwen3-VL on PMC-VQA*.
 
-**Archived release v1.0.0:** [10.5281/zenodo.23492663](https://doi.org/10.5281/zenodo.23492663).
-The Zenodo archive and GitHub release asset contain the identical verified
-`public_data_and_code_v1.0.0.zip` (56,377,051 bytes; SHA256
-`b331e5a97d144b88679ac0c3db2a74e3f4f73834e813e3df458cf409e69d93c0`).
-The archive was frozen before DOI issuance; this repository's citation metadata
-adds the issued DOI without changing the numerical archives.
+**Current complete release: version 1.1.0**, DOI [10.5281/zenodo.23614485](https://doi.org/10.5281/zenodo.23614485). This release contains every numerical archive S2-S13. Earlier version 1.0.0 remains at [10.5281/zenodo.23492663](https://doi.org/10.5281/zenodo.23492663); original archived files are preserved.
 
-**Authors:** Nam-Hyun Yoo (Kyungnam University), Hyojin Park (GIIC, Kyungnam
-University), Jinhong Yang (Inje University; corresponding author,
-jinhong@inje.ac.kr).
+Authors: Nam-Hyun Yoo (Kyungnam University), Hyojin Park (GIIC, Kyungnam University), Jinhong Yang (Inje University; corresponding author, jinhong@inje.ac.kr).
 
-The primary cohort contains 2,048 article-linked groups and the separate
-curated cohort 825 groups. Both frozen Qwen3-VL model sizes answer the same
-questions. The locally prespecified, hash-locked primary 2B guided-minus-control oracle difference
-is -0.15 percentage points (95% CI -0.81 to 0.52). Primary 4B has a nominal positive, exploratory estimate; all outcomes, including negative results, are retained.
-Oracle candidate coverage, matched crop-ranking increment and executable
-decision accuracy are distinct endpoints.
+## Study and extensions
 
-## Contents
+The original primary cohort contains 2,048 article-linked groups and the separate curated cohort 825 groups. Frozen Qwen3-VL 2B and 4B answer the same questions. The locally prespecified, hash-locked primary 2B guided-minus-control two-candidate oracle difference is -0.15 percentage points (95% CI -0.81 to 0.52). The primary 4B positive estimate is nominal and exploratory. Local freezes are not external registration.
 
-- `archives/S2` through `S12`: byte-preserved numerical releases, protocols,
-  prediction probabilities, source identifiers, reference mappings, code and
-  provenance. SHA256 values are in `SHA256SUMS.json`.
-- `archives/S11_File.zip`: the standalone manuscript S11 archive, matching the original final resources.
-- `archives/S12_presentation_and_selector_controls.zip`: 24 October extension, raw predictions, numerical records, analysis code and updated figure sources.
-- `final_resources`: original Figure 1 code and exact error-conditioned correction rates, preserved for the archived release.
-- `REPRODUCING.md`: command-to-result map for all analysis families.
-- `verify_and_extract.py`: validates all archive hashes, safely extracts into
-  a new directory, and optionally runs the complete CPU reanalysis sequence.
+The first 24 October extension (S12) adds a non-visual choice-order perturbation. It produced 13.04 pp of headroom, compared with 4.93 for guided crops. Their cross-intervention difference is 8.11 pp (95% CI 6.45 to 9.77); candidate type and image-token budgets differ, so this is not a matched ranking contrast. The extension also includes smaller-window pilot, fixed-position comparisons and calibration.
 
-## Quick start
+The second 24 October extension (S13) averages probabilities over four cyclic option orders within each of five conditions, after restoring option identities. The primary 2B matched contrast becomes +0.98 pp (nominal 95% CI +0.26 to +1.71). Original baseline and averaged baseline direct accuracies are 43.26% and 45.80%. This is probability averaging before choosing an answer, not an oracle across order-specific answers. Each option occupies each letter once, but only four of 24 permutations are evaluated. All 2,048 main questions follow a 128-question technical pilot. No efficacy-based exclusions or stopping were used.
 
-Use Python 3.12 and install `requirements.txt`. From this repository:
+The positive averaged oracle increment qualifies the original near-zero result: the ranking estimate depends on option-order handling. Averaged guided and baseline direct accuracy were both 45.80%, with 106 rescues and 106 harms. The guided-minus-control direct difference was +0.55 pp (nominal 95% CI -0.44 to +1.55). No general absence of ranking benefit or direct-accuracy improvement is established. This extension is exploratory and leaves the original primary analysis intact.
 
-```
-python verify_and_extract.py --destination reproduction
-python verify_and_extract.py --destination reproduction_full --run
-```
+## Contents and reproduction
 
-The destination must not already exist. The second command validates and
-reanalyses released predictions; it does not download images or run a model.
-It writes per-command logs and a completion receipt inside the destination.
-Full historical inference requires the pinned upstream assets and the GPU
-environment recorded in the archived protocols.
+- archives/S2-S10: original numerical releases, hashes, source identifiers and executable analyses.
+- archives/S11_File.zip: standalone original final resources, unchanged.
+- archives/S12_presentation_and_selector_controls.zip: first 24 October extension, unchanged.
+- archives/S13_order_averaging_and_diagnostics.zip: new raw probabilities, complete mappings, protocol/gates, counts, statistics and independent CPU verification.
+- current_release_figures/: current manuscript artwork and portable current Figure 1/S2 source code; Figure S2 has no planning-range band. Figures 2,3 and S1 are unchanged.
+- SHA256SUMS.json: archive hashes. REPRODUCING.md: command map. verify_and_extract.py: verify and safely extract all archives to one fresh folder; optionally run the full numerical sequence.
 
-The original local freezes and original estimates remain unchanged. Statements
-in archived READMEs such as "not publicly deposited", "author input required"
-or "current figures" describe those earlier local releases. This repository's
-root documentation supersedes their publication and figure-version status.
-The original Figure 1 source is in `final_resources`; S8 supplies original Figures 2-4 and the figure now designated S1. The 24 October manuscript moves original Figure 4 to Figure S2 and removes its planning band. Current Figure 1 and Figure S2 sources are in S12.
+After common extraction, the new extension runs with Python and NumPy:
 
-## Sources and rights
+    python order_averaging_20261024/reproduce_release.py
 
-PMC-VQA: https://huggingface.co/datasets/RadGenome/PMC-VQA
-(revision b56ae594f794867893143b337b4118a835794647).
-SLAKE: https://huggingface.co/datasets/BoKelvin/SLAKE
-(revision a9083ce6c34ac3ffb17671a605962924d8a8f9e9).
-Original source identifiers, model revisions and reconstruction instructions
-are included in the numerical archives. No image collection or model weights
-are redistributed. See `LICENSE.txt` for study-material licences and
-third-party exceptions.
+This checks raw-to-compact mappings, counts, probability averages, all paired bootstrap intervals, letter-position counts and baseline runner-up transitions. It does not need internet access, images or model weights. The original full pipeline additionally requires SciPy, Matplotlib, Pillow and the documented Arial font for legacy plots.
 
-OpenAI Codex assisted code development and execution, analysis checking,
-documentation and plotting. Frozen Qwen models produced the answer records.
+## Source rights and scope
 
-## 24 October 2026 extension
+No original biomedical image pixels, source question/option text, model weights or private patient records are redistributed. Pinned upstream sources and reconstruction instructions are in the numerical archives. Source images and text remain subject to their original terms. No clinician label/relevance annotation audit or larger-model experiment is claimed. All new analyses are exploratory.
 
-The original Zenodo version 1.0.0 and release asset remain unchanged. S11 is now also available as an explicitly named standalone archive; its underlying resources were already present in version 1.0.0. S12 is a new post hoc extension and is not contained in that original DOI version.
+Study-generated numerical data, documentation and figures: CC BY 4.0. Study-authored code: MIT. Third-party notices retain their original rights; see LICENSE.txt. OpenAI Codex assisted implementation, execution, numerical checks, documentation and plotting; the experimental answer records are actual frozen-model inference outputs.
 
-The primary 2B choice-order perturbation completed all 2,048 main questions after a 128-question technical pilot reproduced baseline answers and probabilities exactly. Mapping responses back to original option identities gave 267 rescues, 215 harms and 733 semantic answer changes. Oracle headroom was 13.04 points (95% CI 11.57 to 14.50), compared with 4.93 for guided crops; the paired difference was 8.11 points (6.45 to 9.77). This establishes that substantial reference-assisted coverage can arise without additional visual information; it does not identify a causal fraction of crop rescues.
-
-S12 also reports all nine fixed-position comparisons, baseline calibration, model-dependent correction references, and an excluded 128-question smaller-window pilot. These are exploratory analyses. No clinician annotation audit or larger-model experiment is claimed.
-
-After extracting S12, run `python review_controls_20261024/reproduce_release.py` with NumPy. This recomputes counts, calibration and paired bootstrap intervals from 5,746 existing and 2,176 new row-level records.
+Historical READMEs inside the preserved archives describe their original releases. This root documentation controls the current release and figure mapping. Current manuscript tables are: primary contrast Table 4, complete grid Table 5, image controls Table 6, derangement Table 7, and four-order sensitivity Table 8. The complete current S1 table mapping is in the submission draft.

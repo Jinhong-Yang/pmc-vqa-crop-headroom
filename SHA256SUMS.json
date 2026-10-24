@@ -1,5 +1,8 @@
 {
   "archives/S10_revision_analyses.zip": "553ac7b51766c354e992e7a30bad2fc0c4ff61844c399f0d4e562843b5d6bd14",
+  "archives/S11_File.zip": "b1a6597eaf97f0e47ca8aa75841d308eb825f910f10b2035cfc23215aebebf6e",
+  "archives/S12_presentation_and_selector_controls.zip": "ae6cc090f76ea5542c023c87e81fd95d9b44a83aee78d8c71383cfb0bfaa8dc2",
+  "archives/S13_order_averaging_and_diagnostics.zip": "471dbce8d8ecfd401237adcc1ff3510ac1cc2182eb183cb57f09943ad19440e7",
   "archives/S2_analysis_records.zip": "5f91ba0644faaa243799d36e27283f87663319117e793c3c9d6ee6e629cf4652",
   "archives/S3_raw_predictions.zip": "1ee774bfacb846a6d5a0b07cc3ae9204611e19902b69c2f2cd9d8e7e164d8423",
   "archives/S4_historical_discovery.zip": "6154deda43a3547f9a85d74628546541eae38773415dad0e598ee3ee3d95420e",
@@ -7,7 +10,5 @@
   "archives/S6_complete_grid_2b_and_analyses.zip": "4eb31bcf14871bf81d46526a9f0363410eba33d44350ecdf92c5065f496e611d",
   "archives/S7_complete_grid_4b_predictions.zip": "55f787bd844fe3a6d29a9b1b43cba6d90b58d49ca3479025cfd16f1838a0003e",
   "archives/S8_exact_controls_and_capture.zip": "a5ac6882fe2b7b13f126e161ef9ecf400c1a8a76445910194492b0fdeb0e3897",
-  "archives/S9_partial_capture_and_content_checks.zip": "3991b34d1a816114fefed7e7363449d3de24ab042bb6d6048cca04d48655652c",
-  "archives/S11_File.zip": "b1a6597eaf97f0e47ca8aa75841d308eb825f910f10b2035cfc23215aebebf6e",
-  "archives/S12_presentation_and_selector_controls.zip": "ae6cc090f76ea5542c023c87e81fd95d9b44a83aee78d8c71383cfb0bfaa8dc2"
+  "archives/S9_partial_capture_and_content_checks.zip": "3991b34d1a816114fefed7e7363449d3de24ab042bb6d6048cca04d48655652c"
 }

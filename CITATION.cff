@@ -2,10 +2,10 @@ cff-version: 1.2.0
 message: "Please cite this dataset when using the numerical records or code."
 type: dataset
 title: "Oracle headroom and SigLIP crop-ranking benefit in Qwen3-VL on PMC-VQA: data and code"
-version: 1.0.0
-date-released: 2026-10-20
-doi: "10.5281/zenodo.23492663"
-url: "https://zenodo.org/records/23492663"
+version: 1.1.0
+date-released: 2026-10-24
+doi: "10.5281/zenodo.23614485"
+url: "https://zenodo.org/records/23614485"
 authors:
   - family-names: Yoo
     given-names: Nam-Hyun

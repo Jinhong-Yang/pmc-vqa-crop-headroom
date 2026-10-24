@@ -1,0 +1,82 @@
+[
+  {
+    "cohort_model": "Primary/2B",
+    "condition": "All controls",
+    "estimate": -0.0014648437499999978,
+    "ci95": [
+      -0.008138020833333332,
+      0.005208333333333335
+    ],
+    "n": 2048
+  },
+  {
+    "cohort_model": "Primary/2B",
+    "condition": "Zero overlap",
+    "n": 1696,
+    "estimate": -0.0028498427672955977,
+    "ci95": [
+      -0.011399371069182391,
+      0.0056996855345911954
+    ]
+  },
+  {
+    "cohort_model": "Primary/4B",
+    "condition": "All controls",
+    "estimate": 0.008138020833333336,
+    "ci95": [
+      0.00016276041666666804,
+      0.016276041666666668
+    ],
+    "n": 2048
+  },
+  {
+    "cohort_model": "Primary/4B",
+    "condition": "Zero overlap",
+    "n": 1696,
+    "estimate": 0.013168238993710692,
+    "ci95": [
+      0.0031446540880503138,
+      0.023486635220125784
+    ]
+  },
+  {
+    "cohort_model": "Curated/2B",
+    "condition": "All controls",
+    "estimate": 0.0044444444444444444,
+    "ci95": [
+      -0.006464646464646463,
+      0.01575757575757576
+    ],
+    "n": 825
+  },
+  {
+    "cohort_model": "Curated/2B",
+    "condition": "Zero overlap",
+    "n": 673,
+    "estimate": 0.003219415552253591,
+    "ci95": [
+      -0.010896483407627536,
+      0.017335314512134718
+    ]
+  },
+  {
+    "cohort_model": "Curated/4B",
+    "condition": "All controls",
+    "estimate": -0.000404040404040401,
+    "ci95": [
+      -0.01292929292929293,
+      0.012525252525252528
+    ],
+    "n": 825
+  },
+  {
+    "cohort_model": "Curated/4B",
+    "condition": "Zero overlap",
+    "n": 673,
+    "estimate": -0.0002476473501733529,
+    "ci95": [
+      -0.017087667161961365,
+      0.016598563645368457
+    ]
+  }
+]

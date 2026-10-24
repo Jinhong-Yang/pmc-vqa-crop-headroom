@@ -13,7 +13,7 @@ Sans distributed with Matplotlib.
 | `python reproducibility_bundle/portable_reanalysis.py reproducibility_bundle` | Original main Table 4; S1 A-C; historical discovery and pilot/main contrasts |
 | `python rerun_additional_analysis.py` | Original diagnostic contrasts, selectors, overlap, planning margins |
 | `python verify_additional_analysis.py` | Independent verification of those diagnostics |
-| `python reproduce_added_analyses.py` | Main Table 7; S1 input/organ controls, spatial and multiplicity diagnostics |
+| `python reproduce_added_analyses.py` | Current main Table 6; S1 input/organ controls, spatial and multiplicity diagnostics |
 | `python window_audit_20261019/analyze_windows.py` | Completed nine-window matrix and S1 V-W |
 | `python window_audit_20261019/review_checks.py` | Complete-grid technical and row-level checks |
 | `python window_audit_20261019/verify_windows.py` | Independent complete-grid calculations |
@@ -45,3 +45,9 @@ protocol. Do not overwrite the frozen prediction or protocol records.
 ## Additional 24 October controls (S12)
 
 S11_File.zip provides a standalone copy of the existing final resources. S12_presentation_and_selector_controls.zip extracts to review_controls_20261024/. Run `python review_controls_20261024/reproduce_release.py` to verify the presentation control, smaller-window pilot, fixed-position comparisons and calibration. The command needs only NumPy and the included records; it does not perform inference or download source assets. Results, raw new predictions, protocol hashes and technical gates are included. The original DOI archive remains version 1.0.0 and does not include S12.
+
+## Complete release 1.1.0
+
+The version 1.1.0 DOI contains S2-S13 together. The note above about missing S12 applies only to the preserved original version 1.0.0. S13 extracts to order_averaging_20261024/. Run `python order_averaging_20261024/reproduce_release.py` for the new four-order sensitivity (current Table 8), runner-up transitions and letter-position diagnostics (S1.10-S1.12). It uses NumPy and the included raw/compact records; it performs no GPU inference or downloads. Data files from S2-S12 are unchanged.
+
+Current artwork is in current_release_figures/figures/. The wrapper copies this directory into the extraction root. Run `python current_release_figures/build_current_figures.py` to regenerate current Figure 1 and S2 without historical workspace paths. Figures 2,3 and S1 retain the original artwork. Legacy plot scripts may generate a historical Figure 4 with a planning band; it is not the current Figure S2. The current rendering is supplied and its code runs last in the wrapper.

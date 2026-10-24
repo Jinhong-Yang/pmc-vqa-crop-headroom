@@ -16,7 +16,7 @@ for name in sorted(manifest,key=lambda n:int(Path(n).name.split('_')[0][1:])):
             target=(dest/info.filename).resolve()
             assert target.is_relative_to(dest),info.filename
         z.extractall(dest)
-shutil.copytree(root/'final_resources',dest/'final_resources')
+shutil.copytree(root/'final_resources',dest/'final_resources',dirs_exist_ok=True)
 commands=[
 ['reproducibility_bundle/portable_reanalysis.py','reproducibility_bundle'],
 ['rerun_additional_analysis.py'],['verify_additional_analysis.py'],
@@ -26,7 +26,8 @@ commands=[
 ['content_checks_20261019/analyze_content.py'],['content_checks_20261019/verify_content.py'],
 ['revision_2026_analyses/portable_reproduce.py'],
 ['final_resources/compute_error_conditioned.py'],
-['current_figures/build_figures.py'],['final_resources/create_figure1.py']]
+['current_figures/build_figures.py'],['final_resources/create_figure1.py'],
+['review_controls_20261024/reproduce_release.py']]
 receipt={'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'archive_hashes':manifest,'commands':[],'status':'EXTRACTED'}
 if args.run:
     logs=dest/'reproduction_logs';logs.mkdir()

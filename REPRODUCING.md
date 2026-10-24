@@ -41,3 +41,7 @@ GPU inference: acquire the exact dataset/model revisions recorded in S1 and
 the protocols, reconstruct upstream text using the included utility, adapt
 the archived machine-specific paths in a separate copy, and record a new
 protocol. Do not overwrite the frozen prediction or protocol records.
+
+## Additional 24 October controls (S12)
+
+S11_File.zip provides a standalone copy of the existing final resources. S12_presentation_and_selector_controls.zip extracts to review_controls_20261024/. Run `python review_controls_20261024/reproduce_release.py` to verify the presentation control, smaller-window pilot, fixed-position comparisons and calibration. The command needs only NumPy and the included records; it does not perform inference or download source assets. Results, raw new predictions, protocol hashes and technical gates are included. The original DOI archive remains version 1.0.0 and does not include S12.

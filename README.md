@@ -16,19 +16,19 @@ jinhong@inje.ac.kr).
 
 The primary cohort contains 2,048 article-linked groups and the separate
 curated cohort 825 groups. Both frozen Qwen3-VL model sizes answer the same
-questions. The prespecified primary 2B guided-minus-control oracle difference
-is -0.15 percentage points (95% CI -0.81 to 0.52). Primary 4B has a small
-positive increment; all outcomes, including negative results, are retained.
+questions. The locally prespecified, hash-locked primary 2B guided-minus-control oracle difference
+is -0.15 percentage points (95% CI -0.81 to 0.52). Primary 4B has a nominal positive, exploratory estimate; all outcomes, including negative results, are retained.
 Oracle candidate coverage, matched crop-ranking increment and executable
 decision accuracy are distinct endpoints.
 
 ## Contents
 
-- `archives/S2` through `S10`: byte-preserved numerical releases, protocols,
+- `archives/S2` through `S12`: byte-preserved numerical releases, protocols,
   prediction probabilities, source identifiers, reference mappings, code and
   provenance. SHA256 values are in `SHA256SUMS.json`.
-- `final_resources`: final Figure 1 code, exact error-conditioned correction
-  rates, and current reproduction resources.
+- `archives/S11_File.zip`: the standalone manuscript S11 archive, matching the original final resources.
+- `archives/S12_presentation_and_selector_controls.zip`: 24 October extension, raw predictions, numerical records, analysis code and updated figure sources.
+- `final_resources`: original Figure 1 code and exact error-conditioned correction rates, preserved for the archived release.
 - `REPRODUCING.md`: command-to-result map for all analysis families.
 - `verify_and_extract.py`: validates all archive hashes, safely extracts into
   a new directory, and optionally runs the complete CPU reanalysis sequence.
@@ -52,8 +52,7 @@ The original local freezes and original estimates remain unchanged. Statements
 in archived READMEs such as "not publicly deposited", "author input required"
 or "current figures" describe those earlier local releases. This repository's
 root documentation supersedes their publication and figure-version status.
-The final Figure 1 source is in `final_resources`; S8 supplies Figures 2-4 and
-the original Figure 5 now designated Figure S1.
+The original Figure 1 source is in `final_resources`; S8 supplies original Figures 2-4 and the figure now designated S1. The 24 October manuscript moves original Figure 4 to Figure S2 and removes its planning band. Current Figure 1 and Figure S2 sources are in S12.
 
 ## Sources and rights
 
@@ -68,3 +67,13 @@ third-party exceptions.
 
 OpenAI Codex assisted code development and execution, analysis checking,
 documentation and plotting. Frozen Qwen models produced the answer records.
+
+## 24 October 2026 extension
+
+The original Zenodo version 1.0.0 and release asset remain unchanged. S11 is now also available as an explicitly named standalone archive; its underlying resources were already present in version 1.0.0. S12 is a new post hoc extension and is not contained in that original DOI version.
+
+The primary 2B choice-order perturbation completed all 2,048 main questions after a 128-question technical pilot reproduced baseline answers and probabilities exactly. Mapping responses back to original option identities gave 267 rescues, 215 harms and 733 semantic answer changes. Oracle headroom was 13.04 points (95% CI 11.57 to 14.50), compared with 4.93 for guided crops; the paired difference was 8.11 points (6.45 to 9.77). This establishes that substantial reference-assisted coverage can arise without additional visual information; it does not identify a causal fraction of crop rescues.
+
+S12 also reports all nine fixed-position comparisons, baseline calibration, model-dependent correction references, and an excluded 128-question smaller-window pilot. These are exploratory analyses. No clinician annotation audit or larger-model experiment is claimed.
+
+After extracting S12, run `python review_controls_20261024/reproduce_release.py` with NumPy. This recomputes counts, calibration and paired bootstrap intervals from 5,746 existing and 2,176 new row-level records.
